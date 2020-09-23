@@ -29,7 +29,9 @@ import { FileUploadModule } from 'ng2-file-upload';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
-
+import { PracticeHomeComponent } from '../app/practice/practice-home/practice-home.component';
+import { PracticeBodyComponent } from '../app/practice/body/practice-body/practice-body.component';
+import { ListResolver } from './_resolvers/lists.resolver';
 // import {TimeAgoPipe} from 'time-ago-pipe';
 
 
@@ -51,6 +53,8 @@ export function tokenGetter()
       MemberDetailComponent,
       MemberEditComponent,
       PhotoEditorComponent,
+      PracticeHomeComponent,
+      PracticeBodyComponent
       // TimeAgoPipe
    ],
    imports: [
@@ -80,7 +84,8 @@ export function tokenGetter()
       MemberDetailResolver,
       MemberListResolver,
       MemberEditResolver,
-      PreventUnsavedChanges
+      PreventUnsavedChanges,
+      ListResolver
    ],
    bootstrap: [
       AppComponent
